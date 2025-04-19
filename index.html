@@ -69,7 +69,7 @@ span.psw {
 <body>
 
 
-<form method="post">
+<form onsubmit="myFunction()">
   <div class="container">
     <label for="uname"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname" required>
@@ -80,6 +80,12 @@ span.psw {
     <button type="submit">Login</button>
   </div>
 </form>
+
+  <script>
+    function myFunction() {
+    	window.location.href = "/logged-in"
+    }
+  </script>
 
 </body>
 </html>
