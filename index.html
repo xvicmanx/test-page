@@ -82,7 +82,8 @@ span.psw {
 </form>
 
   <script>
-    function myFunction() {
+    function myFunction(event) {
+        event.preventDefault();
     	window.location.href = "/logged-in"
     }
   </script>
