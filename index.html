@@ -66,7 +66,7 @@ span.psw {
 }
 </style>
 </head>
-<body>
+<body onload="onLoad()">
 
 
 <form onsubmit="myFunction()">
@@ -84,9 +84,18 @@ span.psw {
   <script>
     function myFunction(event) {
         event.preventDefault();
-    	window.location.href = "/logged-in"
+    	
     }
   </script>
+
+  <script>
+    function onLoad() {
+      if (window.location.href.includes('test')) {
+        var base = window.location.href.replace(window.location.search, '');
+      	  window.location.href = base + "/logged-in";
+      }
+    }
+    </script>
 
 </body>
 </html>
